@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="wrapper">
+    <button class="startBtn">Start Game</button>
+  </div>
+
+  <!-- Rule Section -->
+   <div class="rules">
+    <div class="rulesContainer">
+      <h1>Rules For Game</h1>
+      <div class="rulesContainerBox">
+      <p>1.Shuffle and lay cards face down in a grid.</p>
+      <p>2.Flip two cards each turn; match pairs to keep them and take another turn. If no match, flip them back and count a move.</p>
+      <p>3.Remember card positions to find pairs. </p>
+      <p>4.Game ends when all pairs are found.Fewer moves indicate a better performance.</p>
+      <p style="color: rgba(255, 0, 0, 0.921);font-size: 1.1rem; font-weight: bold;">5.You have two minutes to complete the game and a maximum of 40 moves. The game ends if the time runs out or you reach 40 moves.</p>
+      </div>
+      <div class="rulesBtn">
+        <button class="rulesBtn1">Continue</button>
+        <button class="rulesBtn2">Exit</button>
+      </div>
+     </div>
+    </div>
+
+
+   <!-- gameContainer -->
+   <div class="game">
+    <div class="gameContainer">
+      <div class="gameBox1">
+        <div class="gameMoves">Moves:0</div>
+        <div class="gameTime">Time Remaining: <span class="min">01</span><span class="sec">60</span></span></div>
+      </div>
+      <div class="cards">
+        
+      </div> 
+      <div class="stopBtn"><button class="stop">Restart</button></div>
+ 
+     </div>
+   </div>
+    
+   <!-- resultBox -->
+   <div class="result">
+    <div class="resultBox">
+      <div class="resultBox1"></div>
+      <div class="buttonBox">
+       <button class="b1">Restart</button>
+       <button class="b2">Exit</button>
+      </div>
+    </div>
+    </div>
+
+
+
+
+   <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,333 @@
+*{
+  margin: 0;
+  padding: 0;
+  overflow:hidden ;
+ 
+}
+
+.wrapper{
+  width: 100vw;
+  height: 100vh;
+  background-color: #f4c531;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  z-index: 0;
+}
+.startBtn{
+  padding:0.8rem 0.9rem;
+  font-size:1.25rem;
+  border-radius: 0.6em;
+  box-shadow: 0 0.9em 2.8em rgba(86, 66, 0, 0.2);
+  font-weight: bold;
+  cursor: pointer;
+}
+.startBtn:hover{
+  scale: 1.1;
+  transition: all;
+  transition-duration: 300ms;
+}
+
+/* rules */
+
+
+.rules{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0); /* Optional: for a semi-transparent background */
+  top: 0;
+  left: 0;
+  transform: scale(0);
+  transition: all;
+  transition-duration: 300ms;
+}
+.rulesActive{
+  transform: scale(1);
+
+}
+.rulesContainer{
+  background-color: white;
+  border-radius: 0.6em;
+  box-shadow: 0 0.9em 2.8em rgba(86, 66, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding:0.8rem 0.9rem;
+  width: 25rem;
+}
+.rulesContainer h1{
+  padding: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.rulesContainerBox{
+  padding: 0.5rem 0.7rem;
+  border-radius: 0.6em;
+  box-shadow: 0 0.9em 2.8em rgba(86, 66, 0, 0.2);
+  font-size: 1rem;
+  
+
+}
+.rulesContainerBox p{
+  margin: 0.4rem 0;
+
+}
+.rulesBtn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 0.7rem;
+}
+.rulesBtn1{
+  padding:0.5rem ;
+  font-size:1.1rem;
+  margin-right: 1rem;
+  border-radius: 0.6em;
+  box-shadow: 0 0.9em 2.8em rgba(86, 66, 0, 0.2);
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #f4c531;
+  color: rgba(255, 255, 255, 0.9);
+}
+.rulesBtn1:hover{
+  
+    scale: 1.1;
+    transition: all;
+    transition-duration: 300ms;
+ 
+}
+.rulesBtn2{
+  padding:0.5rem ;
+  font-size:1.1rem;
+  margin-right: 1rem;
+  border-radius: 0.6em;
+  box-shadow: 0 0.9em 2.8em rgba(86, 66, 0, 0.2);
+  font-weight: bold;
+  cursor: pointer;
+  color: #f4c531;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.rulesBtn2:hover{
+  
+    scale: 1.1;
+    transition: all;
+    transition-duration: 300ms;
+ 
+}
+
+
+/* game */
+
+.game{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0); /* Optional: for a semi-transparent background */
+  top: 0;
+  left: 0;
+  scale: 0;
+}
+
+.gameActive{
+  scale: 1;
+}
+.gameContainer{
+  background-color: white;
+  border-radius: 0.6em;
+  box-shadow: 0 0.9em 2.8em rgba(86, 66, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding:0.8rem 0.9rem;
+ 
+ 
+}
+.cards{
+  padding: 0.5rem;
+  display: grid;
+  grid-template-columns:repeat(4,1fr) ;
+  grid-template-rows:repeat(4,1fr) ;
+  border-radius: 0.6em;
+  box-shadow: 0 0.9em 2.8em rgba(86, 66, 0, 0.2);
+  margin-top: 0.5rem;
+  perspective: 1000px;
+}
+
+
+.image{
+  height: 4.5rem;
+  width: 4.5rem;
+  margin:0.4rem 0.8rem;
+  cursor: pointer;
+  border-radius: 0.6em;
+  box-shadow: 0 0.9em 2.8em rgb(86, 66, 0);
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  position: relative;
+
+}
+
+.image:hover{
+  scale: 1.05;
+  transition: all;
+  transition-duration: 1000ms;
+}
+
+
+.front,.back{
+  padding:0.5rem ;
+  height: 3.75rem;
+  width: 3.75rem;
+  position: absolute;
+}
+
+.back{
+  padding:0.5rem ;
+  height: 3.75rem;
+  width: 3.75rem;
+  background-color: white;
+  backface-visibility: hidden;
+}  
+
+.toggleimage{
+  transform: rotateY(180deg); 
+}  
+.stopBtn{
+  margin: 0.625rem 0;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 0.7rem;
+}
+.stop{
+  margin-top:0.8rem ;
+  padding:1rem ;
+  font-size:1.3rem;
+  border-radius: 0.6em;
+  box-shadow: 0 0.9em 2.8em rgba(86, 66, 0, 0.2);
+  font-weight: bold;
+  cursor: pointer;
+  color: #f4c531;
+  background-color: #363122ea;
+ 
+}
+.stop:hover{
+  scale: 1.1;
+  transition: all;
+  transition-duration: 300ms;
+
+}
+.gameTime,.gameMoves{
+  margin-top:0.5rem ;
+  padding:1rem ;
+  font-size:1.3rem;
+  border-radius: 0.6em;
+  box-shadow: 0 0.9em 2.8em rgba(86, 66, 0, 0.2);
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  background-color: #363122ea;
+}
+.gameMoves{
+  display: flex;
+  justify-content: center;
+}
+
+.min,.sec{
+  margin-left:0.2rem;
+  padding:0.8rem ;
+  font-size:1.1rem;
+  border-radius: 0.6em;
+  box-shadow: 0 0.9em 2.8em rgba(86, 66, 0, 0.2);
+  font-weight: bold;
+  cursor: pointer;
+  color: #f4c531;
+  background-color: #363122ea;
+}
+
+
+/* result  */
+.result{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 3;
+  background: rgba(0, 0, 0, 0); /* Optional: for a semi-transparent background */
+  top: 0;
+  left: 0;
+  transform: scale(0);
+}
+.resultActive{
+ transform: scale(1);
+}
+.resultBox{
+  font-size: 1.5rem;
+  background-color: #f4c531;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.6em;
+  box-shadow: 0 0.9em 2.8em rgba(86, 66, 0, 0.2);
+  padding:0.8rem 0.9rem;
+  color: rgba(255, 255, 255, 0.92);
+  font-weight: bold;
+}
+.resultBox1{
+  padding: 0.6rem;
+}
+.buttonBox{
+  margin: 0.625rem 0;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 0.7rem;
+}
+.b1,.b2{
+  padding:0.5rem ;
+  font-size:1.2rem;
+  border-radius: 0.6em;
+  box-shadow: 0 0.9em 2.8em rgba(86, 66, 0, 0.2);
+  font-weight: bold;
+  cursor: pointer;
+  color: #f4c531;
+  background-color: #363122ea;
+}
+.b1:hover{
+  scale: 1.1;
+  transition: all;
+  transition-duration: 300ms;
+
+}
+.b2:hover{
+  scale: 1.1;
+  transition: all;
+  transition-duration: 300ms;
+
+}
+@keyframes dhruv{
+  50% {left: 10px;}
+ }
+ .box1{
+animation-name: dhruv; 
+animation-duration: 100ms;  
+animation-iteration-count: 10;
+ }
+
+
+
+
+
+
+
