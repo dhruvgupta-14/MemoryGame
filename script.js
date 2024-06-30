@@ -62,7 +62,7 @@ function playGame(){
 
   function alertMessage(){
   if(seconds===0) resultBox1.textContent='Your Time is up ! 😖 '
-  if(moves>=40) resultBox1.textContent='You have no moves left. ! 😖 '
+  if(moves>=36) resultBox1.textContent='You have no moves left. ! 😖 '
    result.classList.add('resultActive')
    }
 
@@ -81,7 +81,7 @@ function manageTime() {
     resultBox1.textContent='You Win ! 😁 '
     result.classList.add('resultActive');
    } 
-   if(moves>=40) clearInterval(secInterval);
+   if(moves>=36) clearInterval(secInterval);
    if (seconds === 0 && minutes === 0) {
       alertMessage();
       clearInterval(secInterval);
@@ -117,7 +117,7 @@ const randomize=()=>{
  function countMoves(){
   moves++;
   gameMoves.textContent=`Moves: ${moves}`;
-  if(moves==40) alertMessage();
+  if(moves==36) alertMessage();
 }
 
 function getOriginalImage(arr) {
@@ -149,7 +149,7 @@ function check() {
       console.log('not matched');
       setTimeout(()=>{
         addEffect(arr)
-      }, 1500);
+      }, 1400);
     } else {
       
       cardMatch+=2;
